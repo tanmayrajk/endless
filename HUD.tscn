@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Poppins-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://HUD.gd" type="Script" id=2]
+[ext_resource path="res://Poppins-SemiBold2.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 3 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="BGColor" type="ColorRect" parent="."]
+margin_right = 300.0
+margin_bottom = 512.0
+color = Color( 0.105882, 0.101961, 0.0901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+visible = false
+margin_right = 300.0
+margin_bottom = 512.0
+custom_colors/font_color = Color( 0.215686, 0.211765, 0.203922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
+[node name="GameOverLabel" type="Label" parent="."]
+margin_right = 300.0
+margin_bottom = 512.0
+custom_colors/font_color = Color( 0.215686, 0.211765, 0.203922, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "press 'r' to
+restart"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
